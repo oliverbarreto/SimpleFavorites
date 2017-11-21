@@ -97,6 +97,8 @@ class HomeTableViewController: UITableViewController {
         return dateFormatter.string(from: now)
     }
     
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -106,7 +108,6 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! HomeControllerTableViewGroupCell
@@ -122,10 +123,16 @@ class HomeTableViewController: UITableViewController {
         
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "personal"
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = Bundle.main.loadNibNamed("HomeControllerTableViewHeaderView", owner: self, options: nil)?.first as! HomeControllerTableViewHeaderView
+        view.delegate = self
+        
+        // FIX: Must call the proper section header name whit data dictionary
+        view.cellLabel?.text = "personal"
+        
+        return view
     }
-   
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return kSectionHeaderHight
     }
@@ -144,3 +151,16 @@ class HomeTableViewController: UITableViewController {
     */
 
 }
+
+extension HomeTableViewController: HomeControllerHeaderViewCellDelegate {
+    func addGroupsButtonWasPressed(cell: HomeControllerTableViewHeaderView) {
+        
+        print(cell.cellLabel.text!)
+    }
+}
+
+
+
+
+
+

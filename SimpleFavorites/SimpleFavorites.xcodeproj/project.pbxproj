@@ -18,6 +18,8 @@
 		A727192D1FC0934E009720FF /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A727192B1FC0934E009720FF /* Favorite.swift */; };
 		A727192E1FC0934E009720FF /* ComunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A727192C1FC0934E009720FF /* ComunicationManager.swift */; };
 		A72719301FC093CA009720FF /* HomeControllerTableViewGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A727192F1FC093CA009720FF /* HomeControllerTableViewGroupCell.swift */; };
+		A78988B01FC446980078AEA7 /* HomeControllerTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78988AF1FC446980078AEA7 /* HomeControllerTableViewHeaderView.xib */; };
+		A78988B21FC447F40078AEA7 /* HomeControllerTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78988B11FC447F40078AEA7 /* HomeControllerTableViewHeaderView.swift */; };
 		A7EA6AE61FC0A152002D322B /* FavoriteGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EA6AE51FC0A152002D322B /* FavoriteGroup.swift */; };
 		A7EA6AE81FC0A3B7002D322B /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EA6AE71FC0A3B7002D322B /* UIColor_Extension.swift */; };
 		A7EA6AEE1FC0A3D2002D322B /* RandomNumbersIntsUInts3264.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EA6AEB1FC0A3D1002D322B /* RandomNumbersIntsUInts3264.swift */; };
@@ -60,6 +62,8 @@
 		A727192B1FC0934E009720FF /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		A727192C1FC0934E009720FF /* ComunicationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComunicationManager.swift; sourceTree = "<group>"; };
 		A727192F1FC093CA009720FF /* HomeControllerTableViewGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerTableViewGroupCell.swift; sourceTree = "<group>"; };
+		A78988AF1FC446980078AEA7 /* HomeControllerTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeControllerTableViewHeaderView.xib; sourceTree = "<group>"; };
+		A78988B11FC447F40078AEA7 /* HomeControllerTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerTableViewHeaderView.swift; sourceTree = "<group>"; };
 		A7EA6AE51FC0A152002D322B /* FavoriteGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGroup.swift; sourceTree = "<group>"; };
 		A7EA6AE71FC0A3B7002D322B /* UIColor_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor_Extension.swift; sourceTree = "<group>"; };
 		A7EA6AEB1FC0A3D1002D322B /* RandomNumbersIntsUInts3264.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumbersIntsUInts3264.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				A727192F1FC093CA009720FF /* HomeControllerTableViewGroupCell.swift */,
+				A78988B11FC447F40078AEA7 /* HomeControllerTableViewHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 		A72719261FC08CA0009720FF /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				A78988AF1FC446980078AEA7 /* HomeControllerTableViewHeaderView.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -389,6 +395,7 @@
 			files = (
 				A72718E41FC08C6E009720FF /* LaunchScreen.storyboard in Resources */,
 				A72718E11FC08C6E009720FF /* Assets.xcassets in Resources */,
+				A78988B01FC446980078AEA7 /* HomeControllerTableViewHeaderView.xib in Resources */,
 				A72718DC1FC08C6E009720FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +431,7 @@
 				A7EA6AE81FC0A3B7002D322B /* UIColor_Extension.swift in Sources */,
 				A7EA6AE61FC0A152002D322B /* FavoriteGroup.swift in Sources */,
 				A727192E1FC0934E009720FF /* ComunicationManager.swift in Sources */,
+				A78988B21FC447F40078AEA7 /* HomeControllerTableViewHeaderView.swift in Sources */,
 				A72718D71FC08C6E009720FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
