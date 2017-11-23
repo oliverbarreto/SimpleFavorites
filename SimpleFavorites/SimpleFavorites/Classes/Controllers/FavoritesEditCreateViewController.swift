@@ -159,7 +159,7 @@ class FavoritesEditCreateViewController: UIViewController {
     fileprivate func validateAndSave() {
         if validateGroup() {
             
-            guard var name = groupNameTextField.text, var color = groupColorButton.titleLabel?.text, var iconImageName = groupIconButton.titleLabel?.text else { return }
+            guard let name = groupNameTextField.text, var color = groupColorButton.titleLabel?.text, var iconImageName = groupIconButton.titleLabel?.text else { return }
             
             // TODO: Save...
             if color == groupColorDefaultCaptionText {
@@ -168,7 +168,7 @@ class FavoritesEditCreateViewController: UIViewController {
             } else {
                 color = color.replacingOccurrences(of: " color", with: "")
                 let colorsArray = ColorPalette.flatPalette()
-                if let colorObject = colorsArray.first(where: {$0.name == color}) {
+                if let colorObject = colorsArray.first(where: {$0.name.lowercased() == color.lowercased()}) {
                     color = colorObject.color.hexValue
                 } else {
                     color = "#111111"
@@ -197,7 +197,7 @@ class FavoritesEditCreateViewController: UIViewController {
     }
     
     fileprivate func validateGroup() -> Bool {
-        guard var name = groupNameTextField.text, var color = groupColorButton.titleLabel?.text, var iconImageName = groupIconButton.titleLabel?.text else { return false }
+        guard let name = groupNameTextField.text, var _ = groupColorButton.titleLabel?.text, var _ = groupIconButton.titleLabel?.text else { return false }
         if name == "" || name == groupNameDefaultCaptionText { return false }
         
         return true

@@ -196,10 +196,10 @@
 		A727191B1FC08CA0009720FF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A72718DD1FC08C6E009720FF /* SimpleFavorites.xcdatamodeld */,
 				A727192B1FC0934E009720FF /* Favorite.swift */,
 				A7EA6AE51FC0A152002D322B /* FavoriteGroup.swift */,
 				A727192C1FC0934E009720FF /* ComunicationManager.swift */,
-				A72718DD1FC08C6E009720FF /* SimpleFavorites.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
