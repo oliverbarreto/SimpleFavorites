@@ -49,7 +49,7 @@
                 <outlet property="cellActionButton" destination="Lhu-ji-iwb" id="zD0-BR-oG6"/>
                 <outlet property="cellLabel" destination="riZ-Gw-rv4" id="kPj-TM-jgc"/>
             </connections>
-            <point key="canvasLocation" x="10" y="-498"/>
+            <point key="canvasLocation" x="8" y="-601"/>
         </view>
     </objects>
     <resources>

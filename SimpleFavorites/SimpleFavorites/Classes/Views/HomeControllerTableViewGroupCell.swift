@@ -24,7 +24,7 @@ class HomeControllerTableViewGroupCell: UITableViewCell {
     func updateUI() {
         groupName.text = group?.name!
         
-        if let image = UIImage(named: (group?.iconPath!)!) {
+        if let image = UIImage(named: (group?.iconImageName!)!) {
             groupIcon.image = image.withRenderingMode(.alwaysTemplate)
         } else {
             let image = #imageLiteral(resourceName: "Icon_Group_FriendsGroup3").withRenderingMode(.alwaysTemplate)
