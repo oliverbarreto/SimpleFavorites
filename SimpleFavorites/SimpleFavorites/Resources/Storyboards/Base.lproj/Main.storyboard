@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ufS-hq-Bih">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ufS-hq-Bih">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,7 +16,7 @@
         <scene sceneID="nm4-d3-Mnv">
             <objects>
                 <tableViewController id="dI9-qc-bTa" customClass="HomeTableViewController" customModule="SimpleFavorites" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="cnt-4G-lpr">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="cnt-4G-lpr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,7 +48,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewControllerCellID" rowHeight="170" id="6eA-le-iHA" customClass="HomeControllerTableViewGroupCell" customModule="SimpleFavorites" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeTableViewControllerCellID" rowHeight="170" id="6eA-le-iHA" customClass="HomeControllerTableViewGroupCell" customModule="SimpleFavorites" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="375.5" width="375" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6eA-le-iHA" id="0Gt-WR-3J4">
@@ -64,6 +64,7 @@
                                         </view>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Group_FriendsGroup3" translatesAutoresizingMaskIntoConstraints="NO" id="IpC-7G-QTH">
                                             <rect key="frame" x="155.5" y="73" width="64" height="70"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="bbd-iN-K8L"/>
                                             </constraints>
@@ -102,27 +103,23 @@
                             <outlet property="delegate" destination="dI9-qc-bTa" id="lFq-oL-YmO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="rM9-XZ-2Vb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8An-PW-6bM">
-                            <connections>
-                                <segue destination="dNp-th-HWV" kind="show" id="QcK-ou-Esi"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="rM9-XZ-2Vb"/>
                     <connections>
                         <outlet property="headerContainerView" destination="36G-R7-qq3" id="pwf-yg-Kmg"/>
                         <outlet property="headerDate" destination="vr5-na-Tm7" id="5rz-by-0as"/>
                         <outlet property="headerTime" destination="Zk1-Rp-Noi" id="xAo-m3-ifd"/>
+                        <segue destination="dNp-th-HWV" kind="show" identifier="segueCreateFavoriteGroup" id="eNa-Kc-Kee"/>
+                        <segue destination="GLK-68-Qlg" kind="show" identifier="segueEditListOfGroups" id="jFk-ri-B2n"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lp7-Po-YcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1455" y="-125"/>
         </scene>
-        <!--Favorites Edit Create View Controller-->
+        <!--Groups Edit Create View Controller-->
         <scene sceneID="u2S-5m-67T">
             <objects>
-                <viewController id="dNp-th-HWV" customClass="FavoritesEditCreateViewController" customModule="SimpleFavorites" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dNp-th-HWV" customClass="GroupsEditCreateViewController" customModule="SimpleFavorites" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hAl-rA-grz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -299,6 +296,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hke-5Z-LyV"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gfZ-Wr-e28"/>
                     <connections>
                         <outlet property="contentView" destination="i2G-zF-l3R" id="Zm9-Mg-OLF"/>
                         <outlet property="groupCard" destination="bYX-6d-OjJ" id="DRT-JI-bvV"/>
@@ -317,7 +315,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jWf-Ja-jbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2238" y="-124"/>
+            <point key="canvasLocation" x="2732" y="-104"/>
+        </scene>
+        <!--Groups Edit List Of Groups Table View Controller-->
+        <scene sceneID="A9o-Xo-eJM">
+            <objects>
+                <tableViewController id="GLK-68-Qlg" customClass="GroupsEditListOfGroupsTableViewController" customModule="SimpleFavorites" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6IA-Jj-A0i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EditListOfGroupsTableViewControllerCellID" rowHeight="70" id="vwm-YO-iMO" customClass="GroupEditListOfGroupsTableViewCell" customModule="SimpleFavorites" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vwm-YO-iMO" id="tpd-dV-spb">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="69.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EkX-Wb-eTD" customClass="MaterialDesignCardView" customModule="SimpleFavorites" customModuleProvider="target">
+                                            <rect key="frame" x="24" y="10" width="50" height="50"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uUe-er-gM0">
+                                                    <rect key="frame" x="8" y="15" width="34" height="20"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="fsL-tl-b2o"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="MuC-8g-6MU"/>
+                                                <constraint firstAttribute="trailing" secondItem="uUe-er-gM0" secondAttribute="trailing" constant="8" id="NZe-m4-c8y"/>
+                                                <constraint firstAttribute="height" constant="50" id="bRP-Vo-hga"/>
+                                                <constraint firstItem="uUe-er-gM0" firstAttribute="leading" secondItem="EkX-Wb-eTD" secondAttribute="leading" constant="8" id="ltV-vJ-pOr"/>
+                                                <constraint firstItem="uUe-er-gM0" firstAttribute="centerY" secondItem="EkX-Wb-eTD" secondAttribute="centerY" id="mfG-Wn-p3k"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="hasShadow" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Be7-rI-lh6">
+                                            <rect key="frame" x="98" y="24.5" width="227" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Be7-rI-lh6" secondAttribute="trailing" constant="16" id="5wx-gM-GxB"/>
+                                        <constraint firstItem="Be7-rI-lh6" firstAttribute="centerY" secondItem="tpd-dV-spb" secondAttribute="centerY" id="Qpq-db-Hvd"/>
+                                        <constraint firstItem="EkX-Wb-eTD" firstAttribute="centerY" secondItem="tpd-dV-spb" secondAttribute="centerY" id="XWt-pU-0RH"/>
+                                        <constraint firstItem="EkX-Wb-eTD" firstAttribute="leading" secondItem="tpd-dV-spb" secondAttribute="leading" constant="24" id="akJ-fd-5cb"/>
+                                        <constraint firstItem="Be7-rI-lh6" firstAttribute="leading" secondItem="EkX-Wb-eTD" secondAttribute="trailing" constant="24" id="zkQ-ff-5f4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="groupCardIconImageView" destination="uUe-er-gM0" id="qNt-S2-14z"/>
+                                    <outlet property="groupCardView" destination="EkX-Wb-eTD" id="jY3-HJ-0zw"/>
+                                    <outlet property="groupNameLabel" destination="Be7-rI-lh6" id="aAR-SO-aJi"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GLK-68-Qlg" id="SSO-dv-5DL"/>
+                            <outlet property="delegate" destination="GLK-68-Qlg" id="8Cb-i1-wW3"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="dNp-th-HWV" kind="show" identifier="segueEditFavoriteGroup" id="Igq-66-ld8"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zge-pl-cwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2237.5999999999999" y="-797.45127436281871"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZOa-sr-xVz">
@@ -342,4 +417,7 @@
     <resources>
         <image name="Icon_Group_FriendsGroup3" width="64" height="37"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="eNa-Kc-Kee"/>
+    </inferredMetricsTieBreakers>
 </document>

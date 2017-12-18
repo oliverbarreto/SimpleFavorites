@@ -16,25 +16,28 @@ struct IconSet {
     
     static func groupIcons() -> [IconSet] {
         return [
-            IconSet(name: "Default", iconName: "Icon_Group_FriendsGroup3"),
+            IconSet(name: "Default", iconName: "Icon_Group_Default"),
             IconSet(name: "Friends", iconName: "Icon_Group_FriendsGroup2"),
+            IconSet(name: "Friends Group", iconName: "Icon_Group_FriendsGroup3"),
             
             IconSet(name: "Family", iconName: "Icon_Group_Family"),
-            IconSet(name: "Family", iconName: "Icon_Group_Family2"),
-            IconSet(name: "Family", iconName: "Icon_Group_Family4"),
+            IconSet(name: "Large Family", iconName: "Icon_Group_Family_4"),
+            IconSet(name: "Small Family", iconName: "Icon_Group_Family_2"),
         
             IconSet(name: "Work", iconName: "Icon_Group_Work"),
             
             IconSet(name: "Earth", iconName: "Icon_Group_Earth"),
             
             IconSet(name: "Romance", iconName: "Icon_Group_Romance"),
-            IconSet(name: "Love", iconName: "Icon_Group_Heart-outline"),
             IconSet(name: "Love", iconName: "Icon_Group_Heart"),
+            IconSet(name: "Love Outline", iconName: "Icon_Group_Heart_Outline"),
             
+            IconSet(name: "Restaurants", iconName: "Icon_Group_Restaurants"),
+
             IconSet(name: "Gym", iconName: "Icon_Group_Gym"),
-            IconSet(name: "Sport", iconName: "Icon_Group_Sports"),
-            IconSet(name: "Basketball", iconName: "Icon_Group_Basketball-outline"),
-            IconSet(name: "Fotball", iconName: "Icon_Group_Foottball-outline")
+            IconSet(name: "Sports", iconName: "Icon_Group_Sports"),
+            IconSet(name: "Basketball", iconName: "Icon_Group_Basketball"),
+            IconSet(name: "Fotball", iconName: "Icon_Group_Foottball")
             
             // School... ???
         ]
@@ -44,5 +47,10 @@ struct IconSet {
         return "Name: \(name), Icon Name: \(iconName)"
     }
     
-    
+    public static func iconImageName(withIconName name: String) -> String? {
+        if let icon = IconSet.groupIcons().first(where: { $0.name.lowercased() == name.lowercased() }) {
+            return icon.iconName
+        }
+        return nil
+    }
 }

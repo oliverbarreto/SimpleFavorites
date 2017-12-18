@@ -8,10 +8,7 @@
 
 import UIKit
 
-struct OrderedFavoriteGroup {
-    var order: Int!
-    var group: FavoriteGroup!
-}
+
 
 struct FavoriteGroup {
     var name: String!

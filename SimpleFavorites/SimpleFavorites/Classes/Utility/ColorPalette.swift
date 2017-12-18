@@ -11,8 +11,8 @@
 
 import UIKit
 
-// Flat Colors Palette
 
+// Flat Colors Palette
 struct ColorPalette {
     
     // 
@@ -52,11 +52,10 @@ struct ColorPalette {
     struct PaletteColor: CustomStringConvertible {
         let name:           String
         let color:          UIColor
-        let tintColorStyle: ColorStyle
-        let statusBarStyle: ColorStyle
+        var tintColorStyle: ColorStyle
         
         var description: String {
-            return "Color Name: \(name), Color: \(color.hexValue), Tint Color Style: \(tintColorStyle), Statusbar Style: \(statusBarStyle)"
+            return "Color Name: \(name), Color: \(color.hexValue), Tint Color Style: \(tintColorStyle)"
         }
     }
     
@@ -71,50 +70,56 @@ struct ColorPalette {
     
     static func flatPalette() -> [PaletteColor]{
         return [
+        // Flat Colors --   more colors here http://www.flatuicolorpicker.com
+        
                 // Green
-                PaletteColor(name: "Turqoise", color: flatTurqoise(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Green Sea", color: flatGreenSea(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Emerald", color: flatEmeral(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Nephritis", color: flatNephritis(), tintColorStyle: .light, statusBarStyle: .light),
+                PaletteColor(name: "Turqoise", color: flatTurqoise(), tintColorStyle: .light),
+                PaletteColor(name: "Green Sea", color: flatGreenSea(), tintColorStyle: .light),
+                PaletteColor(name: "Emerald", color: flatEmeral(), tintColorStyle: .light),
+                PaletteColor(name: "Nephritis", color: flatNephritis(), tintColorStyle: .light),
                 
                 // Blue
-                PaletteColor(name: "Peter Rever", color: flatPeterRiver(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Belize Hole", color: flatBelizeHole(), tintColorStyle: .light, statusBarStyle: .light),
+                PaletteColor(name: "Peter Rever", color: flatPeterRiver(), tintColorStyle: .light),
+                PaletteColor(name: "Belize Hole", color: flatBelizeHole(), tintColorStyle: .light),
                 
                 // Violet
-                PaletteColor(name: "Amethist", color: flatAmethyst(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Wisteria", color: flatWisteria(), tintColorStyle: .light, statusBarStyle: .light),
+                PaletteColor(name: "Amethist", color: flatAmethyst(), tintColorStyle: .light),
+                PaletteColor(name: "Wisteria", color: flatWisteria(), tintColorStyle: .light),
                 
                 // Pink
-                PaletteColor(name: "Razzmatazz", color: flatRazzmatazz(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Radical Red", color: flatRadicalRed(), tintColorStyle: .light, statusBarStyle: .light),
+                PaletteColor(name: "Razzmatazz", color: flatRazzmatazz(), tintColorStyle: .light),
+                PaletteColor(name: "Radical Red", color: flatRadicalRed(), tintColorStyle: .light),
             
                 // Dark Blue
-                PaletteColor(name: "Wet Asphalt", color: flatWetAsphalt(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Midnight Blue", color: flatMidNightBlue(), tintColorStyle: .light, statusBarStyle: .light),
+                PaletteColor(name: "Wet Asphalt", color: flatWetAsphalt(), tintColorStyle: .light),
+                PaletteColor(name: "Midnight Blue", color: flatMidNightBlue(), tintColorStyle: .light),
                 
                 // Yellow & Orange
-                PaletteColor(name: "Sun Flower", color: flatSunFlower(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Orange", color: flatOrange(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Carrot", color: flatCarrot(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Pumkin", color: flatPumkin(), tintColorStyle: .light, statusBarStyle: .light),
+                PaletteColor(name: "Sun Flower", color: flatSunFlower(), tintColorStyle: .light),
+                PaletteColor(name: "Orange", color: flatOrange(), tintColorStyle: .light),
+                PaletteColor(name: "Carrot", color: flatCarrot(), tintColorStyle: .light),
+                PaletteColor(name: "Pumkin", color: flatPumkin(), tintColorStyle: .light),
 
                 // Red
-                PaletteColor(name: "Alizarin", color: flatAlizarin(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Pomegranate", color: flatPomegranate(), tintColorStyle: .light, statusBarStyle: .light),
+                PaletteColor(name: "Alizarin", color: flatAlizarin(), tintColorStyle: .light),
+                PaletteColor(name: "Pomegranate", color: flatPomegranate(), tintColorStyle: .light),
             
                 // Grey
-                PaletteColor(name: "Clouds", color: flatClouds(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Silver", color: flatSilver(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Concrete", color: flatConcrete(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Asbestos", color: flatAsbestos(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Porcelain", color: flatPorcelain(), tintColorStyle: .light, statusBarStyle: .light),
+                PaletteColor(name: "Clouds", color: flatClouds(), tintColorStyle: .dark),
+                PaletteColor(name: "Porcelain", color: flatPorcelain(), tintColorStyle: .dark),
+                PaletteColor(name: "Silver", color: flatSilver(), tintColorStyle: .light),
+                PaletteColor(name: "Concrete", color: flatConcrete(), tintColorStyle: .light),
+                PaletteColor(name: "Asbestos", color: flatAsbestos(), tintColorStyle: .light),
                 
                 // Black
-                PaletteColor(name: "Darken", color: flatDarken(), tintColorStyle: .light, statusBarStyle: .light),
+                PaletteColor(name: "Darken", color: flatDarken(), tintColorStyle: .light),
                 
                 // White
-                PaletteColor(name: "White", color: flatWhite(), tintColorStyle: .dark, statusBarStyle: .dark)
+                PaletteColor(name: "White", color: flatWhite(), tintColorStyle: .dark),
+                
+                // iOS Defaults
+            PaletteColor(name: "ios Default NavbarColor", color: iosDefaultNavbarColor(), tintColorStyle: .light),
+            PaletteColor(name: "ios Default TintColor", color: iosDefaultTintColor(), tintColorStyle: .light)
         ]
     }
     
@@ -123,14 +128,23 @@ struct ColorPalette {
         return flatPalette().map {$0.color}
     }
     
+    /*
+    static func flatPaletteDarkColors() -> [UIColor] {
+        return flatPalette().filter {$0.tintColorStyle == .dark}
+    }
 
+    static func flatPaletteLightColors() -> [UIColor] {
+        return flatPalette().filter {$0.tintColorStyle == .light}
+    }
+    */
+    
     
     // Material Design Palette
 
     static func materialPalette() -> [PaletteColor]{
-        return [PaletteColor(name: "Razzmatazz", color: materialRazzmatazz(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Lynch", color: materialLynch(), tintColorStyle: .light, statusBarStyle: .light),
-                PaletteColor(name: "Silver", color: materialSilver(), tintColorStyle: .light, statusBarStyle: .light)
+        return [PaletteColor(name: "Razzmatazz", color: materialRazzmatazz(), tintColorStyle: .light),
+                PaletteColor(name: "Lynch", color: materialLynch(), tintColorStyle: .light),
+                PaletteColor(name: "Silver", color: materialSilver(), tintColorStyle: .light)
             // Add more colors to this palette here
         ]
     }
@@ -173,6 +187,16 @@ struct ColorPalette {
     // ***********************************************************************
     
     // Flat Colors --   more colors here http://www.flatuicolorpicker.com
+    
+    // iOS Defaults
+    static func iosDefaultNavbarColor() -> UIColor {
+        return UIColor(red: (247/255), green: (247/255), blue: (247/255), alpha: 1)
+    }
+    
+    static func iosDefaultTintColor() -> UIColor {
+        return UIColor(red: (0/255), green: (122/255), blue: (255/255), alpha: 1)
+    }
+    
     
     // Green
     static func flatTurqoise() -> UIColor {

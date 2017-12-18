@@ -28,6 +28,12 @@ extension UIColor {
     
     //: Convinience init for HEX values passing a string with, or without, the #: #FFFFFF, FFFFFF, #fafa11, FAFA11 are all valid
     convenience init(hex:String) {
+        self.init(hex: hex, withAlpha: 1.0)
+    }
+
+    
+    //: Convinience init for HEX values with alpha passing a string with, or without, the #: #FFFFFF, FFFFFF, #fafa11, FAFA11 are all valid
+    convenience init(hex:String, withAlpha alpha: CGFloat) {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
@@ -43,10 +49,12 @@ extension UIColor {
         Scanner(string: cString).scanHexInt32(&rgbValue)
         
         self.init(red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0))
+                  green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+                  blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+                  alpha: alpha)
     }
+
+    
     
     // Convenience methods that returns the hex value for a given UIColor instance
     var hexValue:String {
@@ -67,5 +75,16 @@ extension UIColor {
         }
     }
     
+    
+    func colorForTranslucency() -> UIColor {
+        var hue: CGFloat = 0
+        var saturation: CGFloat = 0
+        var brightness: CGFloat = 0
+        var alpha: CGFloat = 0
+        
+        self.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+        
+        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+    }
     
 }

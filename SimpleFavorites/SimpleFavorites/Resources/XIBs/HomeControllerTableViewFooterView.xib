@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeControllerTableViewFooterView" customModule="SimpleFavorites" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bn-sl-xge">
+                    <rect key="frame" x="158.5" y="0.0" width="58" height="50"/>
+                    <state key="normal" title=" button">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="editButtonWasPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="5kJ-oc-jW7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6bn-sl-xge" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="AkC-md-MCT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6bn-sl-xge" secondAttribute="bottom" id="E2q-wd-0f1"/>
+                <constraint firstItem="6bn-sl-xge" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Em4-ED-0K4"/>
+                <constraint firstItem="6bn-sl-xge" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MAu-c4-Ovf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="sectionButton" destination="6bn-sl-xge" id="ydg-Me-RfA"/>
+            </connections>
+        </view>
+    </objects>
+</document>

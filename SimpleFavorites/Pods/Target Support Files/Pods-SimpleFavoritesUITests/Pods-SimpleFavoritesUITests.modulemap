@@ -1,0 +1,6 @@
+framework module Pods_SimpleFavoritesUITests {
+  umbrella header "Pods-SimpleFavoritesUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

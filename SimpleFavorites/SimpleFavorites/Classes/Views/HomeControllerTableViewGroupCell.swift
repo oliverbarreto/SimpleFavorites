@@ -8,34 +8,38 @@
 
 import UIKit
 
+
 class HomeControllerTableViewGroupCell: UITableViewCell {
 
+    // MARK: IBOutlets
     @IBOutlet weak var groupCardView: UIView!
     @IBOutlet weak var groupName: UILabel!
     @IBOutlet weak var groupIcon: UIImageView!
     
     // MARK: Model
-    var group: FavoriteGroup? {
+    var group: Group? {
         didSet {
             updateUI()
         }
     }
     
+    // MARK: Customization
     func updateUI() {
-        groupName.text = group?.name!
+        groupName.text = group?.name
         
-        if let image = UIImage(named: (group?.iconImageName!)!) {
+        if let image = UIImage(named: (group?.iconName)!) {
             groupIcon.image = image.withRenderingMode(.alwaysTemplate)
+            
         } else {
             let image = #imageLiteral(resourceName: "Icon_Group_FriendsGroup3").withRenderingMode(.alwaysTemplate)
             groupIcon.image = image
         }
         
-        let color = UIColor(hex: (group?.color!)!)
-        self.backgroundColor = color
+        let color = UIColor(hex: (group?.color)!)
+        self.groupCardView.backgroundColor = color
     }
     
-    public func configureCell(withGroup sender: FavoriteGroup) {
+    public func configureCell(withGroup sender: Group) {
         group = sender
     }
     

@@ -25,7 +25,6 @@ class HomeControllerTableViewHeaderView: UIView {
         }
     }
     
-    
     // MARK: IBOutlets & IBActions
     @IBOutlet weak var cellLabel: UILabel!
     @IBOutlet weak var cellActionButton: UIButton!
